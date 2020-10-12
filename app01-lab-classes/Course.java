@@ -1,33 +1,33 @@
 
 /**
+ * The purpose of this class is to store the information of an university course 
+ * title and ucas course code
  * 
- *
  * @author Serhiy Burkevych
- * @version (a version number or a date)
+ * @version 09/10/2020
  */
 public class Course
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    // Attributes/Variables/Field
+    
+    private String title;
+    
+    // This is a UCAS code number
+    
+    private String codeNo; 
+ 
     /**
      * Constructor for objects of class Course
      */
-    public Course()
+    public Course(String title, String code)
     {
-        // initialise instance variables
-        x = 0;
+        this.title = title;
+        codeNo = code;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+   
+    public void print()
     {
-        // put your code here
-        return x + y;
-    }
+       System.out.println("Course: " + title + ", Code: " + codeNo);  
+    }    
+ 
 }
