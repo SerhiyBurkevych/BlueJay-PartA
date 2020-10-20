@@ -9,35 +9,38 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * Modified by Serhiy Yaroslavovych Burkevych
  */
 public class TicketMachine
 {
-    // The price of a ticket from this machine.
-    private int price;
+   
     // The amount of money entered by a customer so far.
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    //Todo add 2 more tickets
+    private Ticket aylsburyTicket;
+    
+    private Ticket userTicket;
+    
+    //add meth
 
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost;
         balance = 0;
         total = 0;
+        aylsburyTicket = new Ticket("Aylsbury" ,220);
+        userTicket = null;
     }
-
-    /**
-     * @Return The price of a ticket.
-     */
-    public int getPrice()
+    
+    public void printAll()
     {
-        return price;
+     aylsburyTicket.print();
     }
-
+ 
     /**
      * Return The amount of money already inserted for the
      * next ticket.
@@ -45,6 +48,11 @@ public class TicketMachine
     public int getBalance()
     {
         return balance;
+    }
+    
+    public void selectAylsbury()
+    {
+        userTicket = aylsburyTicket;
     }
 
     /**
@@ -71,25 +79,27 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        if(balance >= price) 
+        
+        
+        if(balance >= userTicket.getPrice()) 
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
+            System.out.println("# " + userTicket.getPrice() + " pence.");
             System.out.println("##################");
             System.out.println();
 
             // Update the total collected with the price.
-            total = total + price;
+            total = total + userTicket.getPrice();
             // Reduce the balance by the price.
-            balance = balance - price;
+            balance = balance - userTicket.getPrice();
         }
         else 
         {
             System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
+                               (userTicket.getPrice() - balance) + " more pence.");
                     
         }
     }

@@ -19,26 +19,18 @@ public class Ticket
     /**
      * Constructor for objects of class Ticket
      */
-    public Ticket()
-    {
-       price = 0;
-       destination = "Aylesbury";
-    }
-    
-    /**
-     * 
-     */
-    public void setPrice(String destination, int price)
+    public Ticket(String destination, int price)
     {
        this.price = price;
        this.destination = destination;
     }
     
+ 
     /**
      * 
      */public void print()
     {
-       System.out.println(destination + ", Price"+ price );   
+       System.out.println(destination + ", Price "+ price );   
     }
        
     /**
