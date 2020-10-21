@@ -1,0 +1,40 @@
+TicketMachine ticketMa2 = new TicketMachine();
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.selectAmersham();
+ticketMa1.selectAylesbury();
+ticketMa1.selectHighWycombe();
+ticketMa1.printTicket();
+You must insert at least: 330 more pence.
+ticketMa1.refundBalance()
+    returned int 0
+ticketMa1.selectAmersham();
+ticketMa1.insert£1();
+Inserted 100 pence.
+Total 100 pence.
+ticketMa1.insert£2();
+Inserted 200 pence.
+Total 300 pence.
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# 300 pence.
+##################
+
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.selectAylesbury();
+ticketMa1.insert£2();
+Inserted 200 pence.
+Total 200 pence.
+ticketMa1.insert£2();
+Inserted 200 pence.
+Total 400 pence.
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+# TicketAylesbury
+# 220 pence.
+##################
+
+ticketMa1.refundBalance()
+    returned int 180

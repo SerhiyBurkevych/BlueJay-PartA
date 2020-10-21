@@ -27,7 +27,7 @@ public class TicketMachine
     
     private Ticket userTicket;
     
-    //add meth
+   
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -59,7 +59,17 @@ public class TicketMachine
         return balance;
     }
     
-    public void selectAylsbury()
+    public void selectHighWycombe()
+    {
+        userTicket = highWycombeTicket;
+    }
+    
+    public void selectAmersham()
+    {
+        userTicket = amershamTicket;
+    }
+    
+    public void selectAylesbury()
     {
         userTicket = aylesburyTicket;
     }
@@ -95,7 +105,7 @@ public class TicketMachine
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
+            System.out.println("# Ticket " + userTicket.getDestination());
             System.out.println("# " + userTicket.getPrice() + " pence.");
             System.out.println("##################");
             System.out.println();
@@ -122,6 +132,7 @@ public class TicketMachine
         int amountToRefund;
         amountToRefund = balance;
         balance = 0;
+        printBalance(0);
         return amountToRefund;
     }
     
