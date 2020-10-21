@@ -130,8 +130,8 @@ public class TicketMachine
      */
     public void printBalance(int amount)
     {
-     System.out.println(amount);
-     System.out.println(balance);
+     System.out.println("Inserted " + amount + " pence.");
+     System.out.println("Total " + balance + " pence.");
     }
     
     /**
