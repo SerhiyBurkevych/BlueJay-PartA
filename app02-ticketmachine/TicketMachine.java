@@ -19,7 +19,11 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
     //Todo add 2 more tickets
-    private Ticket aylsburyTicket;
+    private Ticket aylesburyTicket;
+    
+    private Ticket amershamTicket;
+    
+    private Ticket highWycombeTicket;
     
     private Ticket userTicket;
     
@@ -32,13 +36,16 @@ public class TicketMachine
     {
         balance = 0;
         total = 0;
-        aylsburyTicket = new Ticket("Aylsbury" ,220);
+        aylesburyTicket = new Ticket("Aylesbury" ,220);
+        amershamTicket = new Ticket("Amersham " ,300);
+        highWycombeTicket = new Ticket("High Wycombe",330);
+       
         userTicket = null;
     }
     
     public void printAll()
     {
-     aylsburyTicket.print();
+     aylesburyTicket.print();
     }
  
     /**
@@ -52,7 +59,7 @@ public class TicketMachine
     
     public void selectAylsbury()
     {
-        userTicket = aylsburyTicket;
+        userTicket = aylesburyTicket;
     }
 
     /**
