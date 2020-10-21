@@ -18,7 +18,7 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-    //Todo add 2 more tickets
+    
     private Ticket aylesburyTicket;
     
     private Ticket amershamTicket;
@@ -46,6 +46,8 @@ public class TicketMachine
     public void printAll()
     {
      aylesburyTicket.print();
+     amershamTicket.print();
+     highWycombeTicket.print();
     }
  
     /**
@@ -122,4 +124,51 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+    /**
+     * This method will print the current balance
+     */
+    public void printBalance(int amount)
+    {
+     System.out.println(amount);
+     System.out.println(balance);
+    }
+    
+    /**
+     * This method will add 10p on the current balance
+     */
+    public void insert10p()
+    {
+     balance= balance + 10;
+     printBalance(10);
+    }
+    
+    /**
+     * This method will add 20p on the current balance
+     */
+    public void insert20p()
+    {
+     balance= balance + 20;
+     printBalance(20);
+    }
+    
+    /**
+     * This method will add £1 on the current balance
+     */
+    public void insert£1()
+    {
+     balance= balance + 100;
+     printBalance(100);
+    }
+    
+    /**
+     * This method will add £2 on the current balance
+     */
+    public void insert£2()
+    {
+     balance= balance + 200;
+     printBalance(200);
+    }
+    
+     
 }

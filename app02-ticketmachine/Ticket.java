@@ -26,11 +26,12 @@ public class Ticket
     }
     
  
-    /**
-     * 
-     */public void print()
+    /** 
+     * This is how the tickets will be printed aftert selection.
+     */
+    public void print()
     {
-       System.out.println(destination + ", Price "+ price );   
+       System.out.println("To " + destination + ", Price "+ price + " pence" );   
     }
        
     /**
