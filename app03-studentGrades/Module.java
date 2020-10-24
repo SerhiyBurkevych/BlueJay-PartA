@@ -21,8 +21,16 @@ public class Module
         mark = 0;
         this.title = title;
         this.codeNo = codeNo;
-        
-        
+    }
+    
+    public void setMark(int mark)
+    {
+        this.mark = mark;
+    }
+    
+    public int getmark()
+    {
+        return mark;
     }
 
     
