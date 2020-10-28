@@ -51,7 +51,16 @@ public class Course
      */
     public void print()
     {
-       System.out.println("Course: " + title + ", Code: " + codeNo);  
+       System.out.println("Course: " + title + ", Code: " + codeNo); 
+       printModules();
+    }
+    
+    public void printModules()
+    {
+        module1.print();
+        module2.print();
+        module3.print();
+        module4.print();
     }
     
     public void addModule(Module module)
