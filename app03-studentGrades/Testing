@@ -1,0 +1,16 @@
+Course course1 = new Course("CO450", "Computing");
+course1.print();
+Course: CO450, Code: Computing
+Course:Programming Concepts, Code Number: CO452, Mark: 0
+Course:3D Modelling, Code Number: CO461, Mark: 0
+Course:Computer Architectures, Code Number: CO450, Mark: 0
+Course:Game Design, Code Number: CO459, Mark: 0
+Student student1 = new Student("Serhiy Burkevych", "21817073");
+Module module1 = new Module("module1", "2032");
+module1.print();
+Course:module1, Code Number: 2032, Mark: 0
+module1.setMark(50);
+module1.print();
+Course:module1, Code Number: 2032, Mark: 50
+module1.isCompleted()
+    returned boolean true
